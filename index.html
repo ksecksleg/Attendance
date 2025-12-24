@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christmas Celebration Attendance - MAAGAP & Philippine Eagles</title>
-    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAADJElEQVR4nO2WS2gTURSGv5lkJjN5NE2bpG3S2IePalGr4gNE3YgbBUVwI7hyoSJ15UJx4ULFjQsRRBdudOFCBRHBhQ9cqOBCRRBBqKJYW2qbJs1rJpOZzMxVQgpJ05lJ0oUL/+YM99z7n/9x7r0j8B/bfw+gublZKS0tPVxXV3dJFEX1vwCoqakZqqio+FpYWPi5r6/vUHNzs7Lq+/X19bvLysqGRVH8mZGR8WNgYKCqvr5+30oBCCFIkkRRUdH7/Pz877IsJ0Oh0GxPT8+OlQAQRREhBJIkUVBQ8CY3N/d7VlbW9/7+/u0rAZCcLElISUnJu5ycnG/Z2dnfe3t7t/0VQFJkSRLS09NfZ2dnRzMyMqLd3d07VgMgJCUlUVJSMpGWlhZNT0+P9vT0VK9mDMiyTFJSEoWFhZ/S0tKi6enpn7q6ujauFAByBwRBIBAI+JOTk+OyLH/u7OysXA2A5OopKCj4FAqF4qlUCr29vRtWAiBZPfn5+R+DwWBclmVfZ2fnutUAEABkWaa1tXXmer3xeDxzq6urW9bY2OgHPK2trddnZ2fHstns3a2trVWLATQ1NVW1tLQ8mJqaGkulUvdKS0s7Fi2BiooKb2tr69OJiYlhXdfv1tfXH1wMoK2t7fDY2Njb+fn5+7FY7M7GjRs3LgogCAJ1dXXnevv7P83Nzb1Jp9M3q6uraxdqbm5WfD7ftd7e3lc+n+9lPB6/UV1dfWIxgI6OjsPj4+NDOeN3a2pqTi0EUFlZuae9vf3J5OTksFqE+5WVlZcXAmhvbz/0+/fv91lQd3fv2rVr10IVkJ2dvXHz5s0dXV1dL+aeJMvL9fX1/QsByLI8uHXr1h2iKHoBOjs7d05NTX1cCkAAUBQFn893e/v27Tu9gLxer0dRlFeAd8+ePQe8gDo7OytCoVBkenp6RpblL8eOHTvvBfTy5cumpqamU6IoznoBjYyMnB4fH/+s6/rg0aNHz3oBDQ0NnR0dHR3Qdf3j8ePHL3kBffv27eLo6Oiwrut/Tp48ecUL6NevX5dHRkY+6Lr+/dSpU9f/9F7+n+0/sP0BSmjWQJU2p2EAAAAASUVORK5CYII=">
+    <title>Christmas Celebration 2025 - MAAGAP & Philippine Eagles</title>
+    
+    <!-- Favicon - Philippine Eagle Logo -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23FFD700' stroke='%238B0000' stroke-width='2'/%3E%3Cpath d='M50 20 L60 40 L80 40 L65 55 L70 75 L50 60 L30 75 L35 55 L20 40 L40 40 Z' fill='%238B0000'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -12,26 +23,54 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><rect fill="%23000" width="100%" height="100%"/></svg>');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            min-height: 100vh;
-            color: #fff;
+        :root {
+            --primary-red: #8B0000;
+            --primary-green: #006400;
+            --gold: #FFD700;
+            --light-gold: #FFF4CC;
+            --dark-bg: rgba(0, 0, 0, 0.7);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
         }
 
-        .background-overlay {
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a0000 0%, #003300 100%);
+            min-height: 100vh;
+            color: #fff;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-animation {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.7), rgba(0, 100, 0, 0.7));
-            z-index: -1;
+            z-index: 0;
+            opacity: 0.3;
         }
 
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--gold) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Snowflakes */
         .snowflake {
             position: fixed;
             top: -10px;
@@ -40,318 +79,652 @@
             cursor: default;
             animation: snowfall linear infinite;
             color: #fff;
-            font-size: 1em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
 
         @keyframes snowfall {
             0% {
                 transform: translateY(0) rotate(0deg);
+                opacity: 1;
             }
             100% {
                 transform: translateY(100vh) rotate(360deg);
+                opacity: 0.3;
             }
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             position: relative;
             z-index: 2;
         }
 
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 30px;
+        /* Header with Logos */
+        .header-banner {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-green) 100%);
+            border-radius: 25px;
+            padding: 40px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid var(--gold);
+        }
+
+        .header-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23FFD700"/%3E<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23FFD700"/%3E<path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23FFD700"/%3E</svg>') repeat-x;
+            background-size: 120%;
+            opacity: 0.1;
+            animation: wave 10s linear infinite;
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 1200px 0; }
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-badge {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--gold);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo-badge:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .logo-badge i {
+            font-size: 60px;
+            background: linear-gradient(135deg, var(--primary-red), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-title {
             text-align: center;
-            border: 3px solid #FFD700;
+            flex: 1;
+            min-width: 300px;
         }
 
-        .header h1 {
-            color: #8B0000;
-            font-size: 2.5em;
+        .header-title h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.5);
             margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
         }
 
-        .header p {
-            color: #006400;
-            font-size: 1.2em;
-            margin: 5px 0;
+        .header-subtitle {
+            font-size: 1.4em;
+            color: var(--light-gold);
             font-weight: 600;
+            margin: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        .event-info {
-            background: linear-gradient(135deg, #8B0000, #006400);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.95);
+        .event-info-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
             border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            margin-top: 25px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
         }
 
+        .event-info-box p {
+            font-size: 1.2em;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .event-info-box i {
+            color: var(--gold);
+            font-size: 1.3em;
+        }
+
+        /* Glass Card Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 45px 0 rgba(31, 38, 135, 0.5);
+        }
+
+        .card-title {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 30px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .card-title i {
+            font-size: 1.2em;
+        }
+
+        /* Form Styles */
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        label {
+        .form-group label {
             display: block;
-            color: #333;
+            color: #fff;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-group label i {
+            color: var(--gold);
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold);
+            font-size: 1.2em;
         }
 
         input {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1em;
-            transition: border-color 0.3s;
+            padding: 18px 20px 18px 55px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            font-size: 1.1em;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
         }
 
         input:focus {
             outline: none;
-            border-color: #8B0000;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
         }
 
+        /* Buttons */
         .btn {
             width: 100%;
-            padding: 15px;
+            padding: 18px;
             border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            font-weight: 600;
+            border-radius: 15px;
+            font-size: 1.2em;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #8B0000, #006400);
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-green));
             color: white;
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(139, 0, 0, 0.6);
         }
 
         .btn-secondary {
-            background: #FFD700;
+            background: linear-gradient(135deg, var(--gold), #FFA500);
             color: #333;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
         }
 
         .btn-secondary:hover {
-            background: #FFA500;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
         }
 
         .btn-danger {
-            background: #dc3545;
+            background: linear-gradient(135deg, #dc3545, #c82333);
             color: white;
             width: auto;
-            padding: 8px 15px;
-            font-size: 0.9em;
+            padding: 12px 25px;
+            font-size: 1em;
+        }
+
+        .btn-export {
+            background: linear-gradient(135deg, #28a745, #218838);
+            color: white;
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.8), rgba(0, 100, 0, 0.8));
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid var(--gold);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .stat-card i {
+            font-size: 3em;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .stat-card h2 {
+            font-size: 3.5em;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-card p {
+            font-size: 1.1em;
+            color: var(--light-gold);
+            font-weight: 600;
+        }
+
+        /* Search Box */
+        .search-box {
+            margin-bottom: 25px;
+        }
+
+        /* Attendance List */
+        .attendance-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            border-left: 5px solid var(--gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .attendance-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .attendance-info h3 {
+            color: var(--gold);
+            margin-bottom: 8px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .attendance-info p {
+            color: #fff;
+            font-size: 1em;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .attendance-info p i {
+            color: var(--gold);
+        }
+
+        /* Messages */
+        .message {
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
+            border: 2px solid #28a745;
+        }
+
+        .error-message {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            color: #721c24;
+            border: 2px solid #dc3545;
         }
 
         .hidden {
             display: none;
         }
 
-        .attendance-item {
-            background: #f8f9fa;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            border-left: 4px solid #8B0000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .attendance-info {
-            flex-grow: 1;
-        }
-
-        .attendance-info h3 {
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .attendance-info p {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #c3e6cb;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .error-message {
-            background: #f8d7da;
-            color: #721c24;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #f5c6cb;
-            text-align: center;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-
-        .stat-card {
-            background: linear-gradient(135deg, #8B0000, #006400);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            flex: 1;
-            margin: 0 10px;
-        }
-
-        .stat-card h2 {
-            font-size: 2.5em;
-            margin-bottom: 5px;
-        }
-
-        .stat-card p {
-            font-size: 0.9em;
-        }
-
-        .search-box {
-            margin-bottom: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-
-            .stats {
-                flex-direction: column;
-            }
-
-            .stat-card {
-                margin: 10px 0;
-            }
-        }
-
+        /* Footer */
         .footer {
             text-align: center;
-            color: white;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 40px 20px;
+            margin-top: 50px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
         }
 
         .footer p {
-            margin: 5px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: var(--light-gold);
+        }
+
+        .footer strong {
+            color: var(--gold);
+            font-size: 1.2em;
+        }
+
+        .godmisoft-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--primary-red), var(--gold));
+            padding: 15px 30px;
+            border-radius: 50px;
+            margin-top: 20px;
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .godmisoft-badge i {
+            font-size: 1.5em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-title h1 {
+                font-size: 2em;
+            }
+
+            .logo-badge {
+                width: 80px;
+                height: 80px;
+            }
+
+            .logo-badge i {
+                font-size: 40px;
+            }
+
+            .card-title {
+                font-size: 1.5em;
+            }
+
+            .attendance-item {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-danger {
+                width: 100%;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--gold);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <div class="background-overlay"></div>
+    <div class="bg-animation"></div>
 
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>🎄 Christmas Celebration 🎄</h1>
-            <p>MAAGAP Guardians International</p>
-            <p>with</p>
-            <p>Ang Malayang Agila Kuwait KSEC/KSLEG</p>
-            <div class="event-info">
-                <p><strong>📅 December 26, 2025</strong></p>
-                <p>📍 Old Souq, Salmiya State of Kuwait</p>
-                <p><em>Of Unity and Hope</em></p>
+        <!-- Header Banner -->
+        <div class="header-banner">
+            <div class="logo-container">
+                <div class="logo-badge">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="header-title">
+                    <h1>🎄 Christmas Celebration 🎄</h1>
+                    <p class="header-subtitle">MAAGAP Guardians International</p>
+                    <p class="header-subtitle">with</p>
+                    <p class="header-subtitle">Ang Malayang Agila Kuwait KSEC/KSLEG</p>
+                </div>
+                <div class="logo-badge">
+                    <i class="fas fa-dove"></i>
+                </div>
+            </div>
+            <div class="event-info-box">
+                <p><i class="fas fa-calendar-alt"></i> <strong>December 26, 2025</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> Old Souq, Salmiya, State of Kuwait</p>
+                <p><i class="fas fa-heart"></i> <em>Of Unity and Hope</em></p>
             </div>
         </div>
 
-        <!-- Success Message -->
-        <div id="successMessage" class="success-message hidden">
-            ✅ Successfully registered! Merry Christmas!
+        <!-- Messages -->
+        <div id="successMessage" class="message success-message hidden">
+            <i class="fas fa-check-circle"></i> Successfully registered! Merry Christmas! 🎄
         </div>
 
-        <!-- Error Message -->
-        <div id="errorMessage" class="error-message hidden"></div>
+        <div id="errorMessage" class="message error-message hidden"></div>
 
-        <!-- Attendance Form -->
-        <div id="attendanceForm" class="card">
-            <h2 style="color: #8B0000; margin-bottom: 20px; text-align: center;">📝 Register Your Attendance</h2>
+        <!-- Attendance Registration Form -->
+        <div id="attendanceForm" class="glass-card">
+            <h2 class="card-title">
+                <i class="fas fa-clipboard-list"></i>
+                Register Your Attendance
+            </h2>
             <form id="registrationForm">
                 <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" required placeholder="Enter your full name">
+                    <label for="name">
+                        <i class="fas fa-user"></i>
+                        Full Name *
+                    </label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user-circle"></i>
+                        <input type="text" id="name" required placeholder="Enter your full name" autocomplete="name">
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="mobile">Mobile Number *</label>
-                    <input type="tel" id="mobile" required placeholder="+965 XXXX XXXX">
+                    <label for="mobile">
+                        <i class="fas fa-mobile-alt"></i>
+                        Mobile Number *
+                    </label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="mobile" required placeholder="+965 XXXX XXXX" autocomplete="tel">
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">✨ Register Attendance</button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-star"></i> Register Attendance
+                </button>
             </form>
-            <button onclick="showAdminLogin()" class="btn btn-secondary">🔐 Admin Access</button>
+            <button onclick="showAdminLogin()" class="btn btn-secondary">
+                <i class="fas fa-lock"></i> Admin Access
+            </button>
         </div>
 
         <!-- Admin Login -->
-        <div id="adminLogin" class="card hidden">
-            <h2 style="color: #8B0000; margin-bottom: 20px; text-align: center;">🔐 Admin Login</h2>
+        <div id="adminLogin" class="glass-card hidden">
+            <h2 class="card-title">
+                <i class="fas fa-user-shield"></i>
+                Admin Login
+            </h2>
             <form id="loginForm">
                 <div class="form-group">
-                    <label for="adminPassword">Password</label>
-                    <input type="password" id="adminPassword" required placeholder="Enter admin password">
+                    <label for="adminPassword">
+                        <i class="fas fa-key"></i>
+                        Password
+                    </label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="adminPassword" required placeholder="Enter admin password">
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-                <button type="button" onclick="showAttendanceForm()" class="btn btn-secondary">Back to Attendance</button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                <button type="button" onclick="showAttendanceForm()" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Attendance
+                </button>
             </form>
         </div>
 
         <!-- Admin Panel -->
-        <div id="adminPanel" class="card hidden">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h2 style="color: #8B0000;">👑 Admin Dashboard</h2>
-                <button onclick="logout()" class="btn btn-danger">Logout</button>
+        <div id="adminPanel" class="glass-card hidden">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <h2 class="card-title" style="margin: 0;">
+                    <i class="fas fa-crown"></i>
+                    Admin Dashboard
+                </h2>
+                <button onclick="logout()" class="btn btn-danger">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
             </div>
 
-            <div class="stats">
+            <div class="stats-grid">
                 <div class="stat-card">
+                    <i class="fas fa-users"></i>
                     <h2 id="totalCount">0</h2>
                     <p>Total Attendees</p>
                 </div>
             </div>
 
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="🔍 Search by name or mobile number..." onkeyup="filterAttendance()">
+                <div class="input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="🔍 Search by name or mobile number..." onkeyup="filterAttendance()">
+                </div>
             </div>
 
-            <button onclick="exportToCSV()" class="btn btn-secondary" style="margin-bottom: 20px;">📊 Export to CSV</button>
+            <button onclick="exportToCSV()" class="btn btn-export" style="margin-bottom: 25px;">
+                <i class="fas fa-file-download"></i> Export to CSV
+            </button>
 
             <div id="attendanceList"></div>
         </div>
     </div>
 
     <div class="footer">
-        <p>⭐ Developed by <strong>Godmisoft</strong> ⭐</p>
+        <div class="godmisoft-badge">
+            <i class="fas fa-code"></i>
+            <strong>Developed by Godmisoft</strong>
+        </div>
         <p>Heber Mayormita | Kuya Heber</p>
         <p>🎄 Merry Christmas & Happy New Year! 🎆</p>
     </div>
@@ -361,7 +734,7 @@
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
         import { getDatabase, ref, push, onValue, remove } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
 
-        // Firebase Configuration - FROM YOUR VERCEL SCREENSHOT
+        // Firebase Configuration
         const firebaseConfig = {
             apiKey: "AIzaSyAIyKOHr5W-spz4F5INAYUBX14MMOQ9flQ",
             authDomain: "attendance-22f6b.firebaseapp.com",
@@ -376,22 +749,24 @@
         const database = getDatabase(app);
         const attendanceRef = ref(database, 'attendance');
 
-        // Admin password (Base64 encoded for basic security)
-        const ADMIN_PASSWORD = 'admin123'; // CHANGE THIS!
+        // Admin password
+        const ADMIN_PASSWORD = 'maagap2025'; // CHANGE THIS!
 
         let allAttendees = [];
 
         // Create snowflakes
         function createSnowflakes() {
-            const snowflakeCount = 50;
+            const snowflakeCount = 30;
+            const snowflakes = ['❄', '❅', '❆'];
+            
             for (let i = 0; i < snowflakeCount; i++) {
                 const snowflake = document.createElement('div');
                 snowflake.className = 'snowflake';
-                snowflake.innerHTML = '❄';
+                snowflake.innerHTML = snowflakes[Math.floor(Math.random() * snowflakes.length)];
                 snowflake.style.left = Math.random() * 100 + '%';
                 snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
                 snowflake.style.animationDelay = Math.random() * 5 + 's';
-                snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+                snowflake.style.fontSize = (Math.random() * 15 + 15) + 'px';
                 document.body.appendChild(snowflake);
             }
         }
@@ -409,6 +784,11 @@
                 showError('Please fill in all fields');
                 return;
             }
+
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="loading"></span> Registering...';
+            submitBtn.disabled = true;
 
             try {
                 await push(attendanceRef, {
@@ -429,6 +809,9 @@
             } catch (error) {
                 showError('Failed to register. Please try again.');
                 console.error(error);
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
             }
         });
 
@@ -472,18 +855,20 @@
             const list = document.getElementById('attendanceList');
             
             if (attendees.length === 0) {
-                list.innerHTML = '<p style="text-align: center; color: #666; padding: 20px;">No attendees yet.</p>';
+                list.innerHTML = '<p style="text-align: center; color: var(--light-gold); padding: 40px; font-size: 1.2em;"><i class="fas fa-inbox"></i> No attendees yet.</p>';
                 return;
             }
 
-            list.innerHTML = attendees.map(attendee => `
-                <div class="attendance-item">
+            list.innerHTML = attendees.map((attendee, index) => `
+                <div class="attendance-item" style="animation-delay: ${index * 0.1}s;">
                     <div class="attendance-info">
-                        <h3>${attendee.name}</h3>
-                        <p>📱 ${attendee.mobile}</p>
-                        <p>🕐 ${attendee.date}</p>
+                        <h3><i class="fas fa-user-check"></i> ${attendee.name}</h3>
+                        <p><i class="fas fa-phone-alt"></i> ${attendee.mobile}</p>
+                        <p><i class="fas fa-clock"></i> ${attendee.date}</p>
                     </div>
-                    <button class="btn btn-danger" onclick="deleteAttendee('${attendee.id}')">Delete</button>
+                    <button class="btn btn-danger" onclick="deleteAttendee('${attendee.id}')">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </button>
                 </div>
             `).join('');
         }
@@ -517,12 +902,12 @@
                 return;
             }
 
-            let csv = 'Name,Mobile Number,Date & Time\n';
+            let csv = '\ufeffName,Mobile Number,Date & Time\n';
             allAttendees.forEach(attendee => {
                 csv += `"${attendee.name}","${attendee.mobile}","${attendee.date}"\n`;
             });
 
-            const blob = new Blob([csv], { type: 'text/csv' });
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
@@ -562,7 +947,7 @@
 
         function showError(message) {
             const msg = document.getElementById('errorMessage');
-            msg.textContent = message;
+            msg.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${message}`;
             msg.classList.remove('hidden');
             setTimeout(() => msg.classList.add('hidden'), 5000);
         }
