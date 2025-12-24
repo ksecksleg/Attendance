@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Celebration Attendance - MAAGAP & Philippine Eagles</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAADJElEQVR4nO2WS2gTURSGv5lkJjN5NE2bpG3S2IePalGr4gNE3YgbBUVwI7hyoSJ15UJx4ULFjQsRRBdudOFCBRHBhQ9cqOBCRRBBqKJYW2qbJs1rJpOZzMxVQgpJ05lJ0oUL/+YM99z7n/9x7r0j8B/bfw+gublZKS0tPVxXV3dJFEX1vwCoqakZqqio+FpYWPi5r6/vUHNzs7Lq+/X19bvLysqGRVH8mZGR8WNgYKCqvr5+30oBCCFIkkRRUdH7/Pz877IsJ0Oh0GxPT8+OlQAQRREhBJIkUVBQ8CY3N/d7VlbW9/7+/u0rAZCcLElISUnJu5ycnG/Z2dnfe3t7t/0VQFJkSRLS09NfZ2dnRzMyMqLd3d07VgMgJCUlUVJSMpGWlhZNT0+P9vT0VK9mDMiyTFJSEoWFhZ/S0tKi6enpn7q6ujauFAByBwRBIBAI+JOTk+OyLH/u7OysXA2A5OopKCj4FAqF4qlUCr29vRtWAiBZPfn5+R+DwWBclmVfZ2fnutUAEABkWaa1tXXmer3xeDxzq6urW9bY2OgHPK2trddnZ2fHstns3a2trVWLATQ1NVW1tLQ8mJqaGkulUvdKS0s7Fi2BiooKb2tr69OJiYlhXdfv1tfXH1wMoK2t7fDY2Njb+fn5+7FY7M7GjRs3LgogCAJ1dXXnevv7P83Nzb1Jp9M3q6uraxdqbm5WfD7ftd7e3lc+n+9lPB6/UV1dfWIxgI6OjsPj4+NDOeN3a2pqTi0EUFlZuae9vf3J5OTksFqE+5WVlZcXAmhvbz/0+/fv91lQd3fv2rVr10IVkJ2dvXHz5s0dXV1dL+aeJMvL9fX1/QsByLI8uHXr1h2iKHoBOjs7d05NTX1cCkAAUBQFn893e/v27Tu9gLxer0dRlFeAd8+ePQe8gDo7OytDoVBkenp6RpblL8eOHTvvBfTy5cumpqamU6IoznoBjYyMnB4fH/+s6/rg0aNHz3oBDQ0NnR0dHR3Qdf3j8ePHL3kBffv27eLo6Oiwrut/Tp48ecUL6NevX5dHRkY+6Lr+/dSpU9f/9F7+n+0/sP0BSmjWQJU2p2EAAAAASUVORK5CYII=">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><rect fill="%23000" width="100%" height="100%"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.7), rgba(0, 100, 0, 0.7));
+            z-index: -1;
+        }
+
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            z-index: 1;
+            user-select: none;
+            cursor: default;
+            animation: snowfall linear infinite;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border: 3px solid #FFD700;
+        }
+
+        .header h1 {
+            color: #8B0000;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            color: #006400;
+            font-size: 1.2em;
+            margin: 5px 0;
+            font-weight: 600;
+        }
+
+        .event-info {
+            background: linear-gradient(135deg, #8B0000, #006400);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #8B0000;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8B0000, #006400);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: #FFD700;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #FFA500;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+            width: auto;
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .attendance-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #8B0000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .attendance-info {
+            flex-grow: 1;
+        }
+
+        .attendance-info h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .attendance-info p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #c3e6cb;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #f5c6cb;
+            text-align: center;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #8B0000, #006400);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .stat-card h2 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            font-size: 0.9em;
+        }
+
+        .search-box {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .stats {
+                flex-direction: column;
+            }
+
+            .stat-card {
+                margin: 10px 0;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎄 Christmas Celebration 🎄</h1>
+            <p>MAAGAP Guardians International</p>
+            <p>with</p>
+            <p>Ang Malayang Agila Kuwait KSEC/KSLEG</p>
+            <div class="event-info">
+                <p><strong>📅 December 26, 2025</strong></p>
+                <p>📍 Old Souq, Salmiya State of Kuwait</p>
+                <p><em>Of Unity and Hope</em></p>
+            </div>
+        </div>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message hidden">
+            ✅ Successfully registered! Merry Christmas!
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <!-- Attendance Form -->
+        <div id="attendanceForm" class="card">
+            <h2 style="color: #8B0000; margin-bottom: 20px; text-align: center;">📝 Register Your Attendance</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number *</label>
+                    <input type="tel" id="mobile" required placeholder="+965 XXXX XXXX">
+                </div>
+                <button type="submit" class="btn btn-primary">✨ Register Attendance</button>
+            </form>
+            <button onclick="showAdminLogin()" class="btn btn-secondary">🔐 Admin Access</button>
+        </div>
+
+        <!-- Admin Login -->
+        <div id="adminLogin" class="card hidden">
+            <h2 style="color: #8B0000; margin-bottom: 20px; text-align: center;">🔐 Admin Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" required placeholder="Enter admin password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="button" onclick="showAttendanceForm()" class="btn btn-secondary">Back to Attendance</button>
+            </form>
+        </div>
+
+        <!-- Admin Panel -->
+        <div id="adminPanel" class="card hidden">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="color: #8B0000;">👑 Admin Dashboard</h2>
+                <button onclick="logout()" class="btn btn-danger">Logout</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h2 id="totalCount">0</h2>
+                    <p>Total Attendees</p>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Search by name or mobile number..." onkeyup="filterAttendance()">
+            </div>
+
+            <button onclick="exportToCSV()" class="btn btn-secondary" style="margin-bottom: 20px;">📊 Export to CSV</button>
+
+            <div id="attendanceList"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>⭐ Developed by <strong>Godmisoft</strong> ⭐</p>
+        <p>Heber Mayormita | Kuya Heber</p>
+        <p>🎄 Merry Christmas & Happy New Year! 🎆</p>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getDatabase, ref, push, onValue, remove } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
+
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDEZ_IS2N1YJG7fSI-LmNrLxTr7wYvvU7A",
+            authDomain: "christmas-celebration-2025.firebaseapp.com",
+            databaseURL: "https://christmas-celebration-2025-default-rtdb.firebaseio.com",
+            projectId: "christmas-celebration-2025",
+            storageBucket: "christmas-celebration-2025.firebasestorage.app",
+            messagingSenderId: "123456789",
+            appId: "1:123456789:web:abcdef123456"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const attendanceRef = ref(database, 'attendance');
+
+        // Admin password (Base64 encoded for basic security)
+        const ADMIN_PASSWORD = 'admin123'; // Change this!
+
+        let allAttendees = [];
+
+        // Create snowflakes
+        function createSnowflakes() {
+            const snowflakeCount = 50;
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = '❄';
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+                document.body.appendChild(snowflake);
+            }
+        }
+
+        createSnowflakes();
+
+        // Registration Form
+        document.getElementById('registrationForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+
+            if (!name || !mobile) {
+                showError('Please fill in all fields');
+                return;
+            }
+
+            try {
+                await push(attendanceRef, {
+                    name: name,
+                    mobile: mobile,
+                    timestamp: new Date().toISOString(),
+                    date: new Date().toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    })
+                });
+
+                document.getElementById('registrationForm').reset();
+                showSuccess();
+            } catch (error) {
+                showError('Failed to register. Please try again.');
+                console.error(error);
+            }
+        });
+
+        // Admin Login
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const password = document.getElementById('adminPassword').value;
+
+            if (password === ADMIN_PASSWORD) {
+                document.getElementById('adminLogin').classList.add('hidden');
+                document.getElementById('adminPanel').classList.remove('hidden');
+                loadAttendance();
+            } else {
+                showError('Invalid password!');
+            }
+        });
+
+        // Load Attendance
+        function loadAttendance() {
+            onValue(attendanceRef, (snapshot) => {
+                allAttendees = [];
+                const data = snapshot.val();
+                
+                if (data) {
+                    Object.keys(data).forEach(key => {
+                        allAttendees.push({
+                            id: key,
+                            ...data[key]
+                        });
+                    });
+                }
+
+                allAttendees.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                displayAttendance(allAttendees);
+                updateStats();
+            });
+        }
+
+        // Display Attendance
+        function displayAttendance(attendees) {
+            const list = document.getElementById('attendanceList');
+            
+            if (attendees.length === 0) {
+                list.innerHTML = '<p style="text-align: center; color: #666; padding: 20px;">No attendees yet.</p>';
+                return;
+            }
+
+            list.innerHTML = attendees.map(attendee => `
+                <div class="attendance-item">
+                    <div class="attendance-info">
+                        <h3>${attendee.name}</h3>
+                        <p>📱 ${attendee.mobile}</p>
+                        <p>🕐 ${attendee.date}</p>
+                    </div>
+                    <button class="btn btn-danger" onclick="deleteAttendee('${attendee.id}')">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        // Filter Attendance
+        window.filterAttendance = function() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = allAttendees.filter(attendee => 
+                attendee.name.toLowerCase().includes(searchTerm) || 
+                attendee.mobile.includes(searchTerm)
+            );
+            displayAttendance(filtered);
+        };
+
+        // Delete Attendee
+        window.deleteAttendee = async function(id) {
+            if (confirm('Are you sure you want to delete this attendee?')) {
+                try {
+                    await remove(ref(database, `attendance/${id}`));
+                } catch (error) {
+                    showError('Failed to delete. Please try again.');
+                    console.error(error);
+                }
+            }
+        };
+
+        // Export to CSV
+        window.exportToCSV = function() {
+            if (allAttendees.length === 0) {
+                alert('No data to export!');
+                return;
+            }
+
+            let csv = 'Name,Mobile Number,Date & Time\n';
+            allAttendees.forEach(attendee => {
+                csv += `"${attendee.name}","${attendee.mobile}","${attendee.date}"\n`;
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Christmas_Celebration_Attendance_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        };
+
+        // Update Stats
+        function updateStats() {
+            document.getElementById('totalCount').textContent = allAttendees.length;
+        }
+
+        // UI Functions
+        window.showAdminLogin = function() {
+            document.getElementById('attendanceForm').classList.add('hidden');
+            document.getElementById('adminLogin').classList.remove('hidden');
+        };
+
+        window.showAttendanceForm = function() {
+            document.getElementById('adminLogin').classList.add('hidden');
+            document.getElementById('adminPanel').classList.add('hidden');
+            document.getElementById('attendanceForm').classList.remove('hidden');
+        };
+
+        window.logout = function() {
+            document.getElementById('adminPanel').classList.add('hidden');
+            document.getElementById('attendanceForm').classList.remove('hidden');
+            document.getElementById('loginForm').reset();
+        };
+
+        function showSuccess() {
+            const msg = document.getElementById('successMessage');
+            msg.classList.remove('hidden');
+            setTimeout(() => msg.classList.add('hidden'), 5000);
+        }
+
+        function showError(message) {
+            const msg = document.getElementById('errorMessage');
+            msg.textContent = message;
+            msg.classList.remove('hidden');
+            setTimeout(() => msg.classList.add('hidden'), 5000);
+        }
+    </script>
+</body>
+</html>
